@@ -36,28 +36,31 @@
     //end Constructor KEYgen(userIterations)
 
 
-
 /**
 * Member Functions
 */	
-	
+
 	/**
 	* Generates a hash chain of passwords from a secret phrase W
 	*/
 	public void function passGen()
 		// Generate secret W
 		// create string to store the value of the hash (password)
-		// copy W into password
+		// Copy W into password
 		// Apply hash function to password for the number of iterations specified
-		// For each iteration, store Hx(W) in vector passwordList
+		for n in [0,iterations)
+			// Hash hashVal, store in hashVal
+			// Store hashVal in passwordList
+		//endfor
 	// end function passGen
 		
 	/**
 	* Deletes all passwords in a hash chain except the last member
 	*/
 	public void function clearChain()
-		// delete all elements in passwordList except last element
+		// clear sublist of passwordList from [0,iterations) 
 	//end function clearChain
+
 
 	/**
 	 * Retrieves generator's password list
@@ -78,4 +81,4 @@
      */
     public int function getIterations()
         return iterations;
-    //end function getIterations
+	//end function getIterations

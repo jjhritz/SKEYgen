@@ -4,7 +4,7 @@
 
 // Driver function
 void function main()
-	// Set n = 5
+	// Set number of iterations in hash chain to 5
 	// Generate passwordList
 	// Print passwordList
 	// Delete H4(W) to H1(W) from passwordList
