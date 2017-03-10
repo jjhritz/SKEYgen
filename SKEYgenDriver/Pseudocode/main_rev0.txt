@@ -1,0 +1,12 @@
+/**
+*	Test driver module for the (terribly non-secure) S/KEY mockup as implemented in gen.java and auth.java
+*/
+
+// Driver function
+void function main()
+	// Set n = 5
+	// Generate passwordList
+	// Print passwordList
+	// Delete H4(W) to H1(W) from passwordList
+	// Print passwordList
+//end main

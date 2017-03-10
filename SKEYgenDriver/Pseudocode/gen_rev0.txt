@@ -1,0 +1,21 @@
+/**
+*	Generates passwords based on S/KEY algorithm
+*/
+
+/**
+* Generates a hash chain of passwords from a secret phrase W
+*/
+Vector function passGen(int iterations)
+	// Generate secret W
+	// Apply hash function to W iterations times
+	// For each iteration, store Hx(W) in vector passwordList
+	// return passwordList
+// end function passGen
+	
+/**
+* Deletes all passwords in a hash chain except the last member
+*/
+Vector function clearChain(Vector passwordList)
+	// delete all elements in passwordList except last element
+	// return passwordList
+//end function clearChain
