@@ -13,9 +13,9 @@
 *  Constructors
 */
 
-	/*
+	/**
      * Constructor that specifies the generator
-      */
+     */
     public Constructor KEYauth(KEYgen generator)
         // set generator to provided generator
         // create new Vector for reference
@@ -35,10 +35,21 @@
 		// hash password, store in hashPass
 		// compare hashPass to last element in reference
 		// if match
-			// add hashPass to end of reference
-		// else
+			// add password to end of reference
+			// alert success
+		// else, hashes do not match
 			// alert failure
+		//end if
 	// end function authorize
 	
-
+	/**
+     * Prints the list of reference passwords, one on each line
+     */
+    public void function printRefList()
+        //for all elements in the reference list
+            //print out the element on a new line
+        //endfor
+		
+        //print blank line
+    //end function printRefList
 	

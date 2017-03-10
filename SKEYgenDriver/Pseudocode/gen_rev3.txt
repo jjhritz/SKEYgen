@@ -1,0 +1,116 @@
+/**
+*	Generates passwords based on S/KEY algorithm
+*/
+
+/**
+* Member data
+*/
+	private int iterations;                                		//Number of passwords to be generated
+	private SecureRandom seed;             						//random number used to generate secret W
+	private Vector<String> passwordList;               			//Vector used to store the hash chain
+	private MessageDigest hashFunc;                             //Hash function that will be applied to W
+
+
+/**
+*  Constructors
+*/
+
+    /*
+    *   Default constructor
+     */
+     public Constructor KEYgen()
+        // set iterations to 1
+        // create new SecureRandom for see
+        // create new Vector for passwordList
+		// call SHA-1 MessageDigest instance for hashFunc
+     //end Constructor KEYgen()
+
+     /*
+     * Constructor that specifies the number of iterations
+      */
+    public Constructor KEYgen(int userIterations)
+        // set iterations to userIterations
+        // create new SecureRandom for see
+        // create new Vector for passwordList
+		// call SHA-1 MessageDigest instance for hashFunc
+    //end Constructor KEYgen(userIterations)
+
+
+/**
+* Member Functions
+*/	
+
+	/**
+	* Generates a hash chain of passwords from a secret phrase W
+	*/
+	public void function passGen()
+		// Generate secret W
+		// create string to store the value of the hash (password)
+		// Copy W into password
+		// Apply hash function to password for the number of iterations specified
+		for n in [0,iterations)
+			// Hash password, store in password
+			// Store password in passwordList
+		//endfor
+		
+		// Delete W
+	// end function passGen
+		
+		
+	/**
+     * Hashes the provided password using the generator's hash function
+     */
+    public String function hashPass(String password)
+    {
+        // Hash password using generator function
+        //Convert bytes to string
+
+        //return hash string
+    }
+		
+	/**
+	* Deletes all passwords in a hash chain except the last member
+	*/
+	public void function clearChain()
+		// clear sublist of passwordList from [0,iterations) 
+	//end function clearChain
+
+
+	/**
+	 * Retrieves generator's password list
+	 */
+	public Vector function getPasswordList()
+		//return passwordList
+	//end function getPasswordList
+	
+	/**
+    * sets number of iterations for the generator
+     */
+    public void function setIterations(int newIterations)
+        //set iterations to newIterations
+    //end function setIterations
+
+    /**
+     * Retrieves the number of iterations the generator uses
+     */
+    public int function getIterations()
+        return iterations
+	//end function getIterations
+	
+	/**
+     * Retrieves generator hash function
+     */
+    public MessageDigest getHashFunc()
+        return hashFunc
+    // end function getHashFunc
+	
+	**
+     * Prints the list of passwords, one on each line
+     */
+    public void function printPassList()
+        //for all elements in the password list
+            //print out the element on a new line
+        //endfor
+		
+        //print blank line
+    //end function printPassList

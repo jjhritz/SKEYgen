@@ -24,7 +24,7 @@ public class KEYgen
      {
          this.iterations = 1;
          this.seed = new SecureRandom();
-         this.passwordList = new Vector();
+         this.passwordList = new Vector<String>();
 
          try
          {
