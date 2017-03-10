@@ -12,7 +12,7 @@ public class SKEYgenDriver
         // Set number of iterations in hash chain to 5
         int chainLength = 5;
 
-        //create password list
+        //create password generator
         KEYgen generator = new KEYgen(chainLength);
 
         // Generate passwordList

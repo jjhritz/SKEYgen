@@ -89,10 +89,9 @@
      * Prints the list of passwords, one on each line
      */
     public void function printPassList()
-    {
         //for all elements in the password list
             //print out the element on a new line
         //endfor
 		
         //print blank line
-    }
+    //end function printPassList

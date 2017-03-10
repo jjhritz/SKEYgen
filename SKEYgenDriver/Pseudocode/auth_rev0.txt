@@ -1,0 +1,40 @@
+/**
+*	Authenticates passwords based on S/KEY algorithm
+*/
+
+/**
+* Member data
+*/
+	private KEYgen generator;					//The KEYgen used to generate the passwords
+	private Vector<String> reference;			//reference list of all known passwords
+
+
+/**
+*  Constructors
+*/
+
+	/*
+     * Constructor that specifies the generator
+      */
+    public Constructor KEYgen(KEYgen generator)
+        // set generator to userIterations
+        // create new Vector for reference
+		// copy generator password list into reference
+    //end Constructor KEYgen(userIterations)
+
+
+
+/**
+* Member Functions
+*/
+	
+	/**
+	* Determines if a password the user provides was created by the generator
+	*/
+	public void function authorize(String password)
+		//hash password
+		//compare hash to
+	//end function authorize
+	
+
+	

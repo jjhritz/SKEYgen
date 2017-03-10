@@ -68,11 +68,8 @@ public class KEYgen
         for(int n = 0; n < this.iterations; n++)
         {
             // Hash password
-            byte[] byteHash = hashFunc.digest(password.getBytes());
-            //reformat to BigInt
-            BigInteger bigIntPass = new BigInteger(1, byteHash);
-            //Convert to string
-            password = bigIntPass.toString(32);
+            password = this.hashPass(password);
+
             // Store hashVal in passwordList
             passwordList.add(password);
         } //endfor
@@ -81,6 +78,22 @@ public class KEYgen
         W = null;
     } // end function passGen
 
+
+    /**
+     * Hashes the provided password using the generator's hash function
+     */
+    public String hashPass(String password)
+    {
+        // Hash password
+        byte[] byteHash = hashFunc.digest(password.getBytes());
+        //reformat to BigInt
+        BigInteger bigIntPass = new BigInteger(1, byteHash);
+        //Convert to string
+        String passHash = bigIntPass.toString(32);
+
+        //return hash
+        return passHash;
+    }
 
     /**
      * Deletes all passwords in a hash chain except the last member
@@ -97,7 +110,7 @@ public class KEYgen
     public Vector getPasswordList()
     {
         return passwordList;
-    }
+    } //end function getPasswordList
 
     /**
     * sets number of iterations for the generator
@@ -105,7 +118,7 @@ public class KEYgen
     public void setIterations(int newIterations)
     {
         this.iterations = newIterations;
-    }
+    } //end function setIterations
 
     /**
      * Retrieves the number of iterations the generator uses
@@ -113,7 +126,16 @@ public class KEYgen
     public int getIterations()
     {
         return iterations;
-    }
+    } // end function getIterations
+
+
+    /**
+     * Retrieves generator hash function
+     */
+    public MessageDigest getHashFunc()
+    {
+        return hashFunc;
+    } // end function getHashFunc
 
     /**
      * Prints the list of passwords, one on each line
@@ -128,5 +150,6 @@ public class KEYgen
         }
         //print blank line
         System.out.println();
-    }
+    } // end function printPassList
+
 } //end class KEYgen
